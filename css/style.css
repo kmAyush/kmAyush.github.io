@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Megrim|PT+Sans|Satisfy|Cinzel');
+body{
+	background:#161616;
+	/*#521714;*/
+}
+.logo{
+	position: absolute;
+	left:40vw;
+	top: 27vh;
+	color:#D5A54E;
+	font-family: 'Megrim', 'cursive';
+	font-size: 500%; 
+}
+.subtitle{
+	position: absolute;
+	left:35vw;
+	top: 52vh;
+	font-family: 'Cinzel', 'serif';
+	color:#b2b2b2;
+}
