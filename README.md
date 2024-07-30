@@ -1,4 +1,4 @@
 # Do visit 
-URL -  https://kmAyush.github.io ![alt text](image.png)
+URL -  https://kmAyush.github.io
 
 ![Page present look](/image/look_v2.png)
