@@ -18,6 +18,9 @@
     a {
       text-decoration: none;
     }
+    h3 {
+      text-align:center;
+    }
     p {
       text-align:justify;
     }
@@ -45,77 +48,116 @@
     .faqtable dt { margin-bottom: 0.75em; font-style: italic; }
     .faqtable dd { margin-left: 0; margin-bottom: 2em; }
 	</style>
+  <style>
+
+    /* Project Container */
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Project Card */
+    .project-card {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border: 1px solid #dddddd;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .project-card p {
+      margin-bottom: 0;
+    }
+
+    /* Media Query for Tablet and Mobile */
+    @media (max-width: 768px) {
+      .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+  </style>
+  </head>
 </head>
 <body>
 	<div align="center" style="margin-top: 3vh;">
 		<span style="font-size:50px; color: palevioletred;">Welcome to Ayush's website 🃏</span>
 	</div>
-  <div align="center">
-    <p style="text-align: center;"><q><strong>What I cannot create, I do not understand</strong></q> - Richard Feynman</p>
-  </div>
   <hr>
   <p style="text-align: right;"><small><span style="color:#333;">Ayush Krishna Murthi, M Tech, CDS, IISc Bangalore</span><br>
     <a href="github.com/kmAyush">Github</a>,
     <a href="https://www.linkedin.com/in/ayush-krishna-murthi-4117b516a/">LinkedIn</a>,
     <a href="https://www.kaggle.com/neokm10">Kaggle</a></small></p>
-  
-	<section>
-		<h3>Projects : Machine Learning & AI</h3>
-    <table>
-      <tbody>
-        <tr>
-          <td><a href="https://github.com/kmAyush/zero-chess-engine">Zero Knowledge Chess Engine</a>
-          <p><small>Unaware of chess characters and strategies, one look ahead chess engine based on CNN trained on PGN data</small></p></td>
-          <td><a href="https://github.com/kmAyush/Video-Dubbing-with-Lip-Synchronization">Video Dubbing with Lip Synchronization</a>
+
+    <h3>Projects : Machine Learning & Computer Vision</h3>
+    <div class="project-container">
+      <div class="project-card">
+        <a href="https://github.com/kmAyush/zero-chess-engine">Zero Knowledge Chess Engine</a>
+          <p><small>Unaware of chess characters and strategies, one look ahead chess engine based on CNN trained on PGN data</small></p>
+      </div>
+
+      <div class="project-card">
+        <a href="https://github.com/kmAyush/Video-Dubbing-with-Lip-Synchronization">Video Dubbing with Lip Synchronization</a>
           <p><small>Collaborative effort on video+audio input and video+translated_audio output project.
             <br><strong>Role</strong>: Build & trained Speech to text
-          </small></p></td>
-          <td><a href="https://github.com/kmAyush/Football-Video-Analyser">Football Video Analyser</a>
+          </small></p>
+      </div>
+
+      <div class="project-card">
+        <a href="https://github.com/kmAyush/Football-Video-Analyser">Football Video Analyser</a>
           <p><small>Detects player, ball and referees position inside field from a single camera video clip. Other predictions - 
-            ball control, camera movement, player speed and distance. Fine-tuned YOLOv5 model.</small></p></td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/kmAyush/Outlook-Mail-Summarizer">Outlook Mail Summarizer</a>
-            <p><small>Using Windows MAPI, to retrieve emails and then using facebook/bart-large-cnn to summarize.</small></p></td>
-        </tr>
-    </tbody></table>
-	</section>
-	<section>
-		<h3>Projects : System</h3>
-    <table>
-      <tbody>
-        <tr>
-          <td><a href="https://github.com/kmAyush/Sudoku-Java-Game">Java Sudoku</a>
-          <p><small>A game with user interface in java which generate a solvable game and save it persistantly in system.</small></p></td>
-          <td><a href="https://github.com/kmAyush/Rust-shell">Rust Shell</a>
-          <p><small>Shell program to run terminal commands, other than commands like 'ls' also supports special command 'cd', 'end' and '|' pipeline</small></p></td>
-        </tr>
-      </tbody>
-    </table>
-	</section>
-	<section>
-		<h3>Projects : Web Development</h3>
-    <table>
-      <tbody>
-        <tr>
-          <td><a href="https://openreads.up.railway.app/">Digital book collection </a>
+            ball control, camera movement, player speed and distance. Fine-tuned YOLOv5 model.</small></p>
+      </div>
+
+      <div class="project-card">
+        <a href="https://github.com/kmAyush/Outlook-Mail-Summarizer">Outlook Mail Summarizer</a>
+            <p><small>Using Windows MAPI, to retrieve emails and then using facebook/bart-large-cnn to summarize.</small></p>
+      </div>
+    </div>
+    <h3>Projects : System</h3>
+    <div class="project-container">
+      
+      <div class="project-card">
+        <a href="https://github.com/kmAyush/Sudoku-Java-Game">Java Sudoku</a>
+          <p><small>A game with user interface in java which generate a solvable game and save it persistantly in system.</small></p>
+      </div>
+
+      <div class="project-card">
+        <a href="https://github.com/kmAyush/Rust-shell">Rust Shell</a>
+          <p><small>Shell program to run terminal commands, other than commands like 'ls' also supports special command 'cd', 'end' and '|' pipeline</small></p>
+      </div>
+    </div>
+
+    <h3>Projects : Web Development</h3>
+    <div class="project-container">
+      
+      <div class="project-card">
+        <a href="https://github.com/kmAyush/OpenReads">Digital book collection </a>
           <p><small>Full stack MERN based web project to learn MERN and deployment
             <br><strong>Hosted :</strong>
-            <a href = "https://openreads.up.railway.app/">here</a></small></p></td>
-          </small></p></td>
-          <td><a href="https://recursionnitd.in/">Recursion Website</a>
+            <a href = "https://openreads.up.railway.app/">here</a></small></p>
+      </div>
+
+      <div class="project-card">
+        <a href="https://github.com/RECursion-NITD/RECursionNITD-website">Recursion Website</a>
           <p><small>Collaborated website project for college programming club
           <br><strong>Hosted :</strong>
-          <a href = "https://recursionnitd.in/">https://recursionnitd.in/</a></small></p></td>
-          <td><a href="https://htmlpreview.github.io/?https://github.com/kmAyush/Moodcafe-Selfhelp/blob/master/MoodCafe/Mood.html">
-            Moodcafe selfhelp</a>
-            <p><small>Personal basic learning project utilizes bootstrap and javascript
-              <br><strong>Hosted :</strong>
-              <a href = "https://htmlpreview.github.io/?https://github.com/kmAyush/Moodcafe-Selfhelp/blob/master/MoodCafe/Mood.html">here</a></small></p></td>
-        </tr>
-      </tbody>
-    </table>
-	</section>
-  
+          <a href = "https://recursionnitd.in/">https://recursionnitd.in/</a></small></p>
+      </div>
+
+      <div class="project-card">
+        <a href="https://github.com/kmAyush/Moodcafe-Selfhelp">
+          Moodcafe selfhelp</a>
+          <p><small>Personal basic learning project utilizes bootstrap and javascript
+            <br><strong>Hosted :</strong>
+            <a href = "https://htmlpreview.github.io/?https://github.com/kmAyush/Moodcafe-Selfhelp/blob/master/MoodCafe/Mood.html">here</a></small></p>
+      </div>
+
+    </div>
+    <br>
+  <div align="center">
+    <p style="text-align: center;color:darkolivegreen"><q><strong>What I cannot create, I do not understand</strong></q> - Richard Feynman</p>
+  </div>  
 </body>
 </html>
