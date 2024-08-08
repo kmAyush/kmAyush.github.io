@@ -1,20 +1,108 @@
-@import url('https://fonts.googleapis.com/css?family=Megrim|PT+Sans|Satisfy|Cinzel');
-body{
-	background:#161616;
-	/*#521714;*/
+body {
+	font-family:'Lucida Console', monospace;
+	font-size: 18px;
+	color: #111;
+	background-color: #f3f3f3;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 50px;
+	box-sizing: border-box;
+  }
+  a {
+	text-decoration: none;
+  }
+  h3 {
+	text-align:center;
+  }
+  p {
+	text-align:justify;
+  }
+  .landing {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height:100vh; min-height:100dvh;
+	text-align: center;
+  }
+  svg { width: 100%; height: auto; }
+  .svg-container { width: 100%; max-width: 400px; display: inline-block; }
+  .separator { letter-spacing: -9px; }
+  hr { border: none; height: 2px; background-color: lightgrey; width: 100%; margin: 30px auto; }
+  table { border-collapse: collapse; text-align: center; width: 100%; }
+  td {
+	padding: 5px 20px;
+	border: 1px solid #dddddd;
+  }
+  .quiet, .links-container a { color: inherit; }
+  .links-container { font-size: 24px; margin: 20px; }
+  .links-container a { text-decoration: none; margin: 0 10px; }
+  .product-photo { display: block; max-width: 640px; width: 100%; margin: 0 auto; }
+  .faqtable dt { margin-bottom: 0.75em; font-style: italic; }
+  .faqtable dd { margin-left: 0; margin-bottom: 2em; }
+
+
+
+
+/* Project Container */
+.project-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.logo{
-	position: absolute;
-	left:40vw;
-	top: 27vh;
-	color:#D5A54E;
-	font-family: 'Megrim', 'cursive';
-	font-size: 500%; 
+
+/* Project Card */
+.project-card {
+background-color: #f4f4f4;
+padding: 20px;
+border: 1px solid #dddddd;
 }
-.subtitle{
-	position: absolute;
-	left:35vw;
-	top: 52vh;
-	font-family: 'Cinzel', 'serif';
-	color:#b2b2b2;
+
+.project-card h3 {
+margin-top: 0;
 }
+
+.project-card p {
+margin-bottom: 0;
+}
+
+/* Media Query for Tablet and Mobile */
+@media (max-width: 768px) {
+	.project-container {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+}
+
+/* Project Tags */
+.project-tag {
+	display: inline-block;
+	background-color: #e0e0e0;
+	color: #333;
+	padding: 4px 8px;
+	margin-right: 8px;
+	margin-top: 8px;
+	font-size:small;
+	text-align: end;
+  }
+/*
+  .project-tag.cv {
+	background-color: #3572A5;
+	color: #fff;
+  }
+  .project-tag.nlp {
+	background-color: #8535a5;
+	color: #fff;
+  }
+
+  .project-tag.java {
+	background-color: #e76f00;
+	color: #fff;
+  }
+  .project-tag.rust {
+	background-color: rgb(255, 72, 0);
+	color: #fff;
+  }
+  .project-tag.mern {
+	background-color: rgb(54, 166, 69);
+	color: #fff;
+  }
+*/

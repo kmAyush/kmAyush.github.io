@@ -3,82 +3,9 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Add link to style.css -->
+  <link rel="stylesheet" href="css/style.css">
 	<title>Ayush's Portfolio</title>
-	<style>
-		    body {
-      font-family:'Lucida Console', monospace;
-      font-size: 18px;
-      color: #111;
-      background-color: #f3f3f3;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 50px;
-      box-sizing: border-box;
-    }
-    a {
-      text-decoration: none;
-    }
-    h3 {
-      text-align:center;
-    }
-    p {
-      text-align:justify;
-    }
-    .landing {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height:100vh; min-height:100dvh;
-      text-align: center;
-    }
-    svg { width: 100%; height: auto; }
-    .svg-container { width: 100%; max-width: 400px; display: inline-block; }
-    .separator { letter-spacing: -9px; }
-    hr { border: none; height: 2px; background-color: lightgrey; width: 100%; margin: 30px auto; }
-    table { border-collapse: collapse; text-align: center; width: 100%; }
-    td {
-      padding: 5px 20px;
-      border: 1px solid #dddddd;
-    }
-    .quiet, .links-container a { color: inherit; }
-    .links-container { font-size: 24px; margin: 20px; }
-    .links-container a { text-decoration: none; margin: 0 10px; }
-    .product-photo { display: block; max-width: 640px; width: 100%; margin: 0 auto; }
-    .faqtable dt { margin-bottom: 0.75em; font-style: italic; }
-    .faqtable dd { margin-left: 0; margin-bottom: 2em; }
-	</style>
-  <style>
-
-    /* Project Container */
-    .project-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    /* Project Card */
-    .project-card {
-      background-color: #f4f4f4;
-      padding: 20px;
-      border: 1px solid #dddddd;
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-    }
-
-    .project-card p {
-      margin-bottom: 0;
-    }
-
-    /* Media Query for Tablet and Mobile */
-    @media (max-width: 768px) {
-      .project-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      }
-    }
-  </style>
-  </head>
 </head>
 <body>
 	<div align="center" style="margin-top: 3vh;">
@@ -94,25 +21,32 @@
     <div class="project-container">
       <div class="project-card">
         <a href="https://github.com/kmAyush/zero-chess-engine">Zero Knowledge Chess Engine</a>
-          <p><small>Unaware of chess characters and strategies, one look ahead chess engine based on CNN trained on PGN data</small></p>
+          <p><small>Unaware of chess characters and strategies, one look ahead chess engine based on CNN trained on PGN data
+          <div class="project-tag cv">Computer Vision</div>
+        </small></p>
       </div>
 
       <div class="project-card">
         <a href="https://github.com/kmAyush/Video-Dubbing-with-Lip-Synchronization">Video Dubbing with Lip Synchronization</a>
           <p><small>Collaborative effort on video+audio input and video+translated_audio output project.
             <br><strong>Role</strong>: Build & trained Speech to text
+            <div class="project-tag nlp">NLP</div>
           </small></p>
       </div>
 
       <div class="project-card">
         <a href="https://github.com/kmAyush/Football-Video-Analyser">Football Video Analyser</a>
           <p><small>Detects player, ball and referees position inside field from a single camera video clip. Other predictions - 
-            ball control, camera movement, player speed and distance. Fine-tuned YOLOv5 model.</small></p>
+            ball control, camera movement, player speed and distance. Fine-tuned YOLOv5 model.
+            <div class="project-tag cv">Computer Vision</div>
+          </small></p>
       </div>
 
       <div class="project-card">
         <a href="https://github.com/kmAyush/Outlook-Mail-Summarizer">Outlook Mail Summarizer</a>
-            <p><small>Using Windows MAPI, to retrieve emails and then using facebook/bart-large-cnn to summarize.</small></p>
+            <p><small>Using Windows MAPI, to retrieve emails and then using facebook/bart-large-cnn to summarize.
+            <div class="project-tag nlp">NLP</div>
+          </small></p>
       </div>
     </div>
     <h3>Projects : System</h3>
@@ -120,12 +54,17 @@
       
       <div class="project-card">
         <a href="https://github.com/kmAyush/Sudoku-Java-Game">Java Sudoku</a>
-          <p><small>A game with user interface in java which generate a solvable game and save it persistantly in system.</small></p>
+          <p><small>A game with user interface in java which generate a solvable game and save it persistantly in system.
+            <div class="project-tag java">Java</div>
+          </small></p>
+          
       </div>
 
       <div class="project-card">
         <a href="https://github.com/kmAyush/Rust-shell">Rust Shell</a>
-          <p><small>Shell program to run terminal commands, other than commands like 'ls' also supports special command 'cd', 'end' and '|' pipeline</small></p>
+          <p><small>Shell program to run terminal commands, other than commands like 'ls' also supports special command 'cd', 'end' and '|' pipeline
+            <div class="project-tag rust">Rust</div>
+          </small></p>
       </div>
     </div>
 
@@ -136,14 +75,18 @@
         <a href="https://github.com/kmAyush/OpenReads">Digital book collection </a>
           <p><small>Full stack MERN based web project to learn MERN and deployment
             <br><strong>Hosted :</strong>
-            <a href = "https://openreads.up.railway.app/">here</a></small></p>
+            <a href = "https://openreads.up.railway.app/">here</a>
+            <div class="project-tag mern">MERN</div>
+          </small></p>
       </div>
 
       <div class="project-card">
         <a href="https://github.com/RECursion-NITD/RECursionNITD-website">Recursion Website</a>
           <p><small>Collaborated website project for college programming club
           <br><strong>Hosted :</strong>
-          <a href = "https://recursionnitd.in/">https://recursionnitd.in/</a></small></p>
+          <a href = "https://recursionnitd.in/">https://recursionnitd.in/</a>
+          <div class="project-tag">Server-side</div>
+        </small></p>
       </div>
 
       <div class="project-card">
@@ -151,7 +94,9 @@
           Moodcafe selfhelp</a>
           <p><small>Personal basic learning project utilizes bootstrap and javascript
             <br><strong>Hosted :</strong>
-            <a href = "https://htmlpreview.github.io/?https://github.com/kmAyush/Moodcafe-Selfhelp/blob/master/MoodCafe/Mood.html">here</a></small></p>
+            <a href = "https://htmlpreview.github.io/?https://github.com/kmAyush/Moodcafe-Selfhelp/blob/master/MoodCafe/Mood.html">here</a>
+            <div class="project-tag">static page</div>
+          </small></p>
       </div>
 
     </div>
