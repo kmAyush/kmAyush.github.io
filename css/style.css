@@ -83,26 +83,24 @@ margin-bottom: 0;
 	font-size:small;
 	text-align: end;
   }
-/*
-  .project-tag.cv {
-	background-color: #3572A5;
-	color: #fff;
-  }
-  .project-tag.nlp {
-	background-color: #8535a5;
-	color: #fff;
-  }
 
-  .project-tag.java {
-	background-color: #e76f00;
-	color: #fff;
-  }
-  .project-tag.rust {
-	background-color: rgb(255, 72, 0);
-	color: #fff;
-  }
-  .project-tag.mern {
-	background-color: rgb(54, 166, 69);
-	color: #fff;
-  }
-*/
+.project-tag.cv {
+background-color: rgb(53, 114, 165, 0.3);
+
+}
+.project-tag.nlp {
+background-color: rgb(133, 53, 165, 0.3);
+
+}
+
+.project-tag.java {
+background-color: rgb(231, 111, 0, 0.3);
+
+}
+.project-tag.rust {
+background-color: rgb(255, 72, 0, 0.3);
+
+}
+.project-tag.mern {
+background-color: rgb(54, 166, 69, 0.3);
+}
