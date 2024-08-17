@@ -1,47 +1,46 @@
 body {
-	font-family:'Lucida Console', monospace;
-	font-size: 18px;
-	color: #111;
-	background-color: #f3f3f3;
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 0 50px;
-	box-sizing: border-box;
-  }
-  a {
-	text-decoration: none;
-  }
-  h3 {
-	text-align:center;
-  }
-  p {
-	text-align:justify;
-  }
-  .landing {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height:100vh; min-height:100dvh;
-	text-align: center;
-  }
-  svg { width: 100%; height: auto; }
-  .svg-container { width: 100%; max-width: 400px; display: inline-block; }
-  .separator { letter-spacing: -9px; }
-  hr { border: none; height: 2px; background-color: lightgrey; width: 100%; margin: 30px auto; }
-  table { border-collapse: collapse; text-align: center; width: 100%; }
-  td {
-	padding: 5px 20px;
-	border: 1px solid #dddddd;
-  }
-  .quiet, .links-container a { color: inherit; }
-  .links-container { font-size: 24px; margin: 20px; }
-  .links-container a { text-decoration: none; margin: 0 10px; }
-  .product-photo { display: block; max-width: 640px; width: 100%; margin: 0 auto; }
-  .faqtable dt { margin-bottom: 0.75em; font-style: italic; }
-  .faqtable dd { margin-left: 0; margin-bottom: 2em; }
+font-family:'Lucida Console', monospace;
+font-size: 18px;
+color: #111;
+background-color: #f3f3f3;
+max-width: 1280px;
+margin: 0 auto;
+padding: 0 50px;
+box-sizing: border-box;
+}
+a {
+text-decoration: none;
+}
+p {
+text-align:justify;
+}
+.landing {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height:100vh; min-height:100dvh;
+text-align: center;
+}
+svg { width: 100%; height: auto; }
+.svg-container { width: 100%; max-width: 400px; display: inline-block; }
+.separator { letter-spacing: -9px; }
+hr { border: none; height: 2px; background-color: lightgrey; width: 100%; margin: 30px auto; }
+table { border-collapse: collapse; text-align: center; width: 100%; }
+td {
+padding: 5px 20px;
+border: 1px solid #dddddd;
+}
+.quiet, .links-container a { color: inherit; }
+.links-container { font-size: 24px; margin: 20px; }
+.links-container a { text-decoration: none; margin: 0 10px; }
+.product-photo { display: block; max-width: 640px; width: 100%; margin: 0 auto; }
+.faqtable dt { margin-bottom: 0.75em; font-style: italic; }
+.faqtable dd { margin-left: 0; margin-bottom: 2em; }
 
-
+.title_name{
+font-family: 'CustomPixelFont';
+}
 
 
 /* Project Container */
@@ -103,4 +102,11 @@ background-color: rgb(255, 72, 0, 0.3);
 }
 .project-tag.mern {
 background-color: rgb(54, 166, 69, 0.3);
+}
+
+@font-face {
+    font-family: 'CustomPixelFont';
+    src: url('mai10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
