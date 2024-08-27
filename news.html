@@ -32,7 +32,6 @@
         .news_card {
           padding: 20px;
           border: 1px solid #dddddd;
-          margin:5px;
         }
         body {
             font-family:'Lucida Console', monospace;
@@ -55,6 +54,10 @@
     <div class="news_container" id="stories"></div>
 
     <script>
+        function formatTimestamp(timestamp) {
+            const date = new Date(timestamp * 1000);  // Convert to milliseconds
+            return date.toLocaleString();  // Convert to local date-time string
+        }
         // Fetch latest stories from Hacker News
         fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
             .then(response => response.json())
@@ -76,8 +79,10 @@
                         storyElement.innerHTML = `
                             <div class="news_card">
                             <a href="${story.url}" target="_blank">${story.title}</a><br>
-                            <small>By: ${story.by}</small><br>
-                            <p>Score: ${story.score}</p>
+                            <small><p>Posted on: ${formatTimestamp(story.time)}</p>
+                            By: ${story.by}<br>
+                            <p style="color:grey">Score: ${story.score}</p></small>
+                            
                             </div>
                         `;
                         storiesContainer.appendChild(storyElement);
