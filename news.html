@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .story {
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        p {
+            margin: 5px 0;
+        }
+        a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+        .news_container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        /* Project Card */
+        .news_card {
+          padding: 20px;
+          border: 1px solid #dddddd;
+          margin:5px;
+        }
+        body {
+            font-family:'Lucida Console', monospace;
+            font-size: 18px;
+            color: #111;
+            background-color: #f3f3f3;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 50px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <small><a href="index.html">  < Back to home</a></small>
+    <h1>Top 25 Hacker News Stories</h1>
+    From <a href="https://news.ycombinator.com/">Hacker News</a><br>
+    <hr>
+    <div class="news_container" id="stories"></div>
+
+    <script>
+        // Fetch latest stories from Hacker News
+        fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
+            .then(response => response.json())
+            .then(storyIds => {
+                // Limit to 25 stories
+                const top10StoryIds = storyIds.slice(0, 25);
+                const storyPromises = top10StoryIds.map(id => {
+                    const storyUrl = `https://hacker-news.firebaseio.com/v0/item/${id}.json`;
+                    return fetch(storyUrl).then(response => response.json());
+                });
+
+                // Wait for all stories to be fetched
+                Promise.all(storyPromises).then(stories => {
+                    const storiesContainer = document.getElementById('stories');
+
+                    stories.forEach(story => {
+                        const storyElement = document.createElement('div');
+                        storyElement.className = 'story';
+                        storyElement.innerHTML = `
+                            <div class="news_card">
+                            <a href="${story.url}" target="_blank">${story.title}</a><br>
+                            <small>By: ${story.by}</small><br>
+                            <p>Score: ${story.score}</p>
+                            </div>
+                        `;
+                        storiesContainer.appendChild(storyElement);
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching stories:', error);
+            });
+    </script>
+</body>
+</html>
