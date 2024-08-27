@@ -41,7 +41,14 @@ border: 1px solid #dddddd;
 .title_name{
 font-family: 'CustomPixelFont';
 }
-
+a.button {
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 14px;
+	border:1px solid #4CAF50;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
 
 /* Project Container */
 .project-container {
