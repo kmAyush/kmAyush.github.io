@@ -9,10 +9,6 @@
             font-family: Arial, sans-serif;
             padding: 20px;
         }
-        
-        .story {
-            margin-bottom: 30px;
-        }
         h2 {
             margin: 0;
             font-size: 1.5em;
@@ -42,16 +38,6 @@
         body {
             font-family:'Lucida Console', monospace;
             font-size: 18px;
-            color: #111;
-            background-color: #f3f3f3;
-            
-            margin: 0 auto;
-            padding: 0 50px;
-            box-sizing: border-box;
-        }
-        body {
-            font-family:'Lucida Console', monospace;
-            font-size: 18px;
             color: #b1adac;
             background-color: #1e222b;
             margin: 0 auto;
@@ -63,10 +49,9 @@
 </head>
 <body>
     <br>
-    <small><a href="index.html">  < Back to home</a></small>
+    <small><a href="index.html" style="color:#c4777f;">  < Back to home</a></small>
     <h1>Top 25 Hacker News Stories</h1>
-    From <a href="https://news.ycombinator.com/">Hacker News</a><br>
-    <hr>
+    From <a href="https://news.ycombinator.com/" style="color:#c4777f;">Hacker News</a><br><br>
     <div class="news_container" id="stories"></div>
 
     <script>
@@ -91,13 +76,12 @@
 
                     stories.forEach(story => {
                         const storyElement = document.createElement('div');
-                        storyElement.className = 'story';
+                        storyElement.className = 'news_card';
                         storyElement.innerHTML = `
-                            <div class="news_card">
-                            <a href="${story.url}" target="_blank">${story.title}</a><br>
-                            <small><p>Posted on: ${formatTimestamp(story.time)}</p>
-                            By: ${story.by}<br>
-                            <p style="color:grey">Score: ${story.score}</p></small>
+                            <a href="${story.url}" target="_blank" style="font-size:22px;">${story.title}</a>
+                            <small><p style="color:grey">Posted on: ${formatTimestamp(story.time)}</p>
+                            <p>By: ${story.by}<p>
+                            <p style="color:#e0c084;">Score: ${story.score}</p></small>
                             
                             </div>
                         `;
