@@ -55,6 +55,36 @@
     <div class="news_container" id="stories"></div>
 
     <script>
+        // Function to format the date and time
+    function formatStoryTime(storyTime) {
+        // Split the date and time string
+        const [datePart, timePart] = storyTime.split(', ');
+
+        // Convert date part from "DD/MM/YYYY" to "MM/DD/YYYY" for correct parsing by Date object
+        const [day, month, year] = datePart.split('/');
+        const formattedDateStr = `${month}/${day}/${year} ${timePart}`;
+
+        // Create a new Date object
+        const date = new Date(formattedDateStr);
+
+        // Get the time in the desired format (e.g., 06:58 am)
+        const timeString = date.toLocaleTimeString('en-US', {
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true
+        });
+
+        // Get the date in the desired format (e.g., August 29, 2024)
+        const dateString = date.toLocaleDateString('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+        });
+
+        // Combine time and date with separator
+        return `${dateString} | ${timeString}`;
+    }
+
         function formatTimestamp(timestamp) {
             const date = new Date(timestamp * 1000);  // Convert to milliseconds
             return date.toLocaleString();  // Convert to local date-time string
@@ -79,7 +109,7 @@
                         storyElement.className = 'news_card';
                         storyElement.innerHTML = `
                             <a href="${story.url}" target="_blank" style="font-size:22px;">${story.title}</a>
-                            <small><p style="color:grey">Posted on: ${formatTimestamp(story.time)}</p>
+                            <small><p style="color:grey">${formatStoryTime(formatTimestamp(story.time))}</p>
                             <p>By: ${story.by}<p>
                             <p style="color:#e0c084;">Score: ${story.score}</p></small>
                             
