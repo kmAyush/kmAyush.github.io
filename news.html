@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
+    <link rel="stylesheet" href="css/news_style.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
             padding: 20px;
         }
         h2 {
@@ -36,7 +36,6 @@
             border: 1px solid #31353e;
         }
         body {
-            font-family:'Lucida Console', monospace;
             font-size: 18px;
             color: #b1adac;
             background-color: #1e222b;
@@ -99,16 +98,16 @@
                     const storyUrl = `https://hacker-news.firebaseio.com/v0/item/${id}.json`;
                     return fetch(storyUrl).then(response => response.json());
                 });
-
                 // Wait for all stories to be fetched
                 Promise.all(storyPromises).then(stories => {
                     const storiesContainer = document.getElementById('stories');
 
-                    stories.forEach(story => {
+                    stories.forEach((story,index) => {
                         const storyElement = document.createElement('div');
+                        const titleColor = index % 2 === 0 ? '#61afef;' : '#60bec9';
                         storyElement.className = 'news_card';
                         storyElement.innerHTML = `
-                            <a href="${story.url}" target="_blank" style="font-size:22px;">${story.title}</a>
+                            <a href="${story.url}" target="_blank" style="color:${titleColor};font-size:22px;">${story.title}</a>
                             <small><p style="color:grey">${formatStoryTime(formatTimestamp(story.time))}</p>
                             <p>By: ${story.by}<p>
                             <p style="color:#e0c084;">Score: ${story.score}</p></small>
