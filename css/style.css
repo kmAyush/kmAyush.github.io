@@ -172,28 +172,16 @@ dotlottie-player {
 	color: #726e6e;
 	background-color: transparent;
 	padding:10px;
-	border-radius: 50%;
-	border: 1px solid #726e6e;
 	transition: background-color 0.3s;
+	bottom:50px;
+	right:50px;
+}
+.icon-details{
+	visibility: hidden;
 }
 
 .music-icon:hover {
 	color:#60bec9;
-	border: 1px solid #60bec9;
-}
-.icon-details {
-	font: 12px;
-	visibility: hidden;
-	color:#60bec9;
-	text-align: right;
-	border-radius: 6px;
-	padding: 8px 0;
-	position: absolute;
-	bottom: 50px; /* Position the tooltip above the icon */
-	
-	z-index: 1;
-	opacity: 0;
-	transition: opacity 0.3s;
 }
 
 /* Show the tooltip when hovering over the icon */
